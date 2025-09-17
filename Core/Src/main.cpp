@@ -20,6 +20,13 @@
 #include "main.h"
 #include "string.h"
 
+#include "adc.hpp"
+#include "voltageSensor.hpp"
+#include "voltageSensorManager.hpp"
+#include <vector>
+
+using std::vector;
+
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -123,6 +130,14 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  adc adc1,adc2,adc3;
+  voltageSensor v1(1,-120,adc1);
+  voltageSensor v2(1,-120,adc2);
+  voltageSensor v3(1,-120,adc3);
+
+  vector<voltageSensor> vect = {v1,v2,v3};
+  voltageSensorManager voltSenseManager(vect);
+  voltSenseManager.getAverageVoltage();
   while (1)
   {
     /* USER CODE END WHILE */

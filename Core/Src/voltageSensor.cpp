@@ -11,3 +11,12 @@ voltageSensor::voltageSensor(float aGain, float anOffset, adc &anAdc):gain(aGain
 {
 
 }
+
+float voltageSensor::getVoltage()
+{
+    uint16_t raw = vadc.getRawValue();
+    float converted =  raw / RESOLUTION;
+    converted *= gain;
+    converted += offset;
+    return converted;
+}

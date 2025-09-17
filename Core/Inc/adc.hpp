@@ -5,6 +5,7 @@
 
 class adc{
     public:
+        adc();
         virtual uint16_t getRawValue();
 };
 

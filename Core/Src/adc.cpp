@@ -1,9 +1,14 @@
-#include "stdlib.h" // Needed for rand()
+#include <stdlib.h>
 
 #include "adc.hpp"
 
-#undef RAND_MAX
+#undef  RAND_MAX
 #define RAND_MAX 65534
+
+adc::adc()
+{
+    srand(0);
+}
 
 uint16_t adc::getRawValue()
 {
