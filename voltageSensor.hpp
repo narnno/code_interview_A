@@ -6,12 +6,12 @@
 
 class voltageSensor{
     public:
-        voltageSensor(float aGain, float anOffset, adc &anAdc);
-        virtual float getVoltage();
+        voltageSensor(float aGain, float anOffset, Adc &anAdc);
+        //virtual float getVoltage();
     private:
         float gain;
         float offset;
-        adc &vadc;
+        Adc &vadc;
 };
 
 #endif
