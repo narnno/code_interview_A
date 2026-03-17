@@ -1,11 +1,20 @@
-You are tasked to provide a
+You are tasked to provide a basic c++ implementation for a voltage sensor relying on an existing interface. 
 
--Complete the missing method for the voltageSensor class
--Create a new class that can take a static array of voltageSensor objects and provide a way to compute the average voltage of all managed sensors
+1. Add the VoltageSensor class
+-Complete the VoltageSensor class inside VoltageSensor.hpp/VoltageSensor.cpp that inherits the ISensor interface
+-Add gain and offset members to the VoltageSensor class that are to be provided at construction time
+-Add a reference to an Adc object that will later provide a fake sampled value from a fictive sensor
+-Add a constructor that takes gain, offset and the refence to the Adc object to initialize an VoltageSensor object
+-Implements the interface method getConvertedSample() that computes and returns the converted value from the Adc getRawValue() method 
+-The getConvertedSample() method shall use the gain and offset members to return the converted value from the raw value obtain from the Adc object
+
+2. Test the new class
+-Provide a test code inside the main.cpp that instanciates a VoltageSensor object and displays the result of the getConvertedSample() function
+
+If time allows : 
+3. Add a container class to do computation on VoltageSensor objects
+
+-Create a new class named that can take an STL vector of voltageSensor objects and provides a way to compute the average voltage of all managed sensors
 -Finally, test your implementation inside the main.cpp using a set of 3 sensors
 
-
-Notes: 
-1- the voltage sensor measures a breaker panel AC line voltage going from -120V to +120V. 
-2- You have access to the c++ standard library if wanted/needed
 
