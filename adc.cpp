@@ -5,12 +5,12 @@
 #undef RAND_MAX
 #define RAND_MAX 65534
 
-adc::adc()
+Adc::Adc()
 {
     srand(0);
 }
 
-uint16_t adc::getRawValue()
+uint16_t Adc::getRawValue()
 {
     return rand() % RAND_MAX;
 }

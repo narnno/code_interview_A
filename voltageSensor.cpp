@@ -7,7 +7,7 @@
 #define RESOLUTION (65535u/PEAK_PEAK_SIGNAL_AMPLITUDE_VOLTS) //Resolution of the ADC (bit/Volt)
 
 
-voltageSensor::voltageSensor(float aGain, float anOffset, adc &anAdc):gain(aGain),offset(anOffset),vadc(anAdc)
+voltageSensor::voltageSensor(float aGain, float anOffset, Adc &anAdc):gain(aGain),offset(anOffset),vadc(anAdc)
 {
 
 }

@@ -3,9 +3,9 @@
 
 #include <stdint.h>
 
-class adc{
+class Adc{
     public:
-        adc();
+        Adc();
         virtual uint16_t getRawValue();
 };
 
